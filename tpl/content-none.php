@@ -26,8 +26,11 @@
 			<div class="sorry-inner">
 			<ul class="search-no-reasults">
 				<?php 
-				$result = $wpdb->get_results("SELECT ID,post_title FROM $wpdb->posts where post_status='publish' and post_type='post' ORDER BY ID DESC LIMIT 0 , 20");
-				foreach ($result as $post) {
+				// 修改查询以排除加密文章
+                    		$recent_posts_query = "SELECT ID, post_title FROM $wpdb->posts WHERE post_status='publish' AND post_type='post' AND post_password = '' ORDER BY ID DESC LIMIT 0, 20";
+                    		$recent_posts = $wpdb->get_results($wpdb->prepare($recent_posts_query));
+				if (!empty($recent_posts)) {
+				foreach ($recent_posts as $post) {
 				setup_postdata($post);
 				$postid = $post->ID;
 				$title = $post->post_title;
