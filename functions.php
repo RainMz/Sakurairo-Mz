@@ -10,6 +10,21 @@
 
 include_once('inc/classes/IpLocation.php');
 
+// 隐藏受保护的文章的函数
+function exclude_protected($where) {
+    global $wpdb;
+    return $where .= " AND {$wpdb->posts}.post_password = '' AND {$wpdb->posts}.post_status != 'private' ";
+}
+
+// 决定何处显示受保护的文章
+function exclude_protected_action($query) {
+    if (!is_single() && !is_page() && !is_admin() && !$query->is_feed()) {
+        add_filter('posts_where', 'exclude_protected');
+    }
+}
+
+// 挂载动作到正确的时间点
+add_action('pre_get_posts', 'exclude_protected_action');
 
 define('IRO_VERSION', wp_get_theme()->get('Version'));
 define('INT_VERSION', '19.1.1');
