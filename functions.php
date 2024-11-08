@@ -27,7 +27,7 @@ function exclude_protected_action($query) {
 add_action('pre_get_posts', 'exclude_protected_action');
 
 define('IRO_VERSION', wp_get_theme()->get('Version'));
-define('INT_VERSION', '19.1.1');
+define('INT_VERSION', '19.2.0');
 define('BUILD_VERSION', '2');
 
 function check_php_version($preset_version)
@@ -2382,7 +2382,7 @@ function register_shortcodes() {
             esc_attr($atts['direction']),
             $atts['avatar'],
             $speaker_alt,
-            esc_html($content)
+            $content
         );
     });
 
