@@ -1294,7 +1294,7 @@ body.dark .site-title img {
 .site-info {
   text-align: center;
   font-size: 13px;
-  color: #B9B9B9;
+  color: #ffffff;
   font-weight: var(--global-font-weight);
 
 }
@@ -6024,7 +6024,7 @@ object {
 }
 
 .site-info a {
-  color: #B9B9B9;
+  color: #ffffff;
 }
 
 .footertext p {
