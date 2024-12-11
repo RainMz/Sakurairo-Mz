@@ -3435,8 +3435,8 @@ msgstr ""
 
 #: options/theme-options.php:3470
 msgid ""
-"<img src=\"https://s.nmxc.ltd/sakurairo_vision/@2.7/options/leaflow.webp\" "
-"width=\"25%\" height=\"25%\"/><img src=\"https://s.nmxc.ltd/sakurairo_vision/@2.7/"
+"<img src=\"https://s3.rains.life/sakurairo-vision/options/leaflow.webp\" "
+"width=\"25%\" height=\"25%\"/><img src=\"https://s3.rains.life/sakurairo-vision/"
 "options/postchat.webp\" width=\"25%\" height=\"25%\"/>"
 msgstr ""
 
@@ -3880,7 +3880,7 @@ msgstr ""
 
 #: options/theme-options.php:3980
 msgid ""
-"<img src=\"https://s.nmxc.ltd/sakurairo_vision/@2.7/series/headlogo.webp\"  "
+"<img src=\"https://s3.rains.life/sakurairo-vision/series/headlogo.webp\"  "
 "alt=\"Theme Information\" />"
 msgstr ""
 
